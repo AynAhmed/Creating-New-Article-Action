@@ -11,6 +11,10 @@ Rails.application.routes.draw do
 
   root 'articles#index'
 
+  resources :categories do
+    resources :articles
+  end
+
   resources :articles do
     resources :comments
   end
