@@ -1,24 +1,18 @@
 # README
+# Blog Project
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Blog is a Ruby on Rails project that allows users to create, edit, and delete articles, categorize them and add comments to articles. Articles and comments can have different statuses (private, public, archived). 
 
-Things you may want to cover:
+## Getting Started
 
-* Ruby version
+### Prerequisites
 
-* System dependencies
+- Ruby (version X.X.X)
+- Rails (version X.X.X)
+- PostgreSQL (if applicable)
 
-* Configuration
+## Rake Tasks
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+bin/rails db:add_articles
+bin/rails db:add_categories
+bin/rails db:backfill_categories_description
