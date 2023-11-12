@@ -1,7 +1,7 @@
 # README
 # Blog Project
 
-Blog is a Ruby on Rails project that allows users to create, edit, and delete articles, categorize them and add comments to articles. Articles and comments can have different statuses (private, public, archived). 
+Blog is a Ruby on Rails project that allows users to create, edit, and delete articles, and also categorize them and add comments to articles. Articles and comments can have different statuses (private, public, archived). 
 
 ## Getting Started
 
