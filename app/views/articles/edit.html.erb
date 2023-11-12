@@ -1,3 +1,7 @@
-<h1>Edit Article</h1>
+<!-- app/views/categories/edit.html.erb -->
+<h1>Edit Category</h1>
 
-<%= render "form", article: @article %>
+<%= render 'form' %>
+
+<%= link_to 'Show', @category %> |
+<%= link_to 'Back', categories_path %>

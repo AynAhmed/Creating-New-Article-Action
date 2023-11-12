@@ -1,0 +1,86 @@
+/* app/assets/stylesheets/blog_styles.scss */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  .newCategory{
+    border-style: outset;
+    padding: 8px;
+    text-align: center;
+    background-color: rgb(152, 186, 152);
+    border-radius: 10px;
+    
+}
+  
+  h1 {
+    color: #333;
+    text-align: center;
+  }
+  
+  ul.categoryContainer {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  ul.categoryContainer li {
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  ul.categoryContainer li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  ul.categoryContainer li ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  ul.categoryContainer li ul li {
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .categoryEdit,
+  .categoryDelete {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 4px;
+  }
+  
+  .categoryDelete {
+    background-color: #f44336;
+    margin-left: 5px;
+  }
+  
+  .categoryDesc {
+    color: #777;
+    font-style: italic;
+  }
+  
+  .newCategoryLink {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+  }
+  

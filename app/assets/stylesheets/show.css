@@ -1,0 +1,45 @@
+/* app/assets/stylesheets/categories.css */
+
+.category-show {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .category-name {
+    font-size: 24px;
+    color: white;
+  }
+  
+  .category-description {
+    font-style: italic;
+    color: #666;
+  }
+  
+  .articles-heading {
+    font-size: 20px;
+    margin-top: 20px;
+    color: #333;
+  }
+  
+  .article-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .article-item {
+    margin-bottom: 10px;
+  }
+  
+  .back-link {
+    display: block;
+    margin-top: 20px;
+    color:  #333;
+    text-decoration: none;
+   text-align: center;
+  }
+  .article-item {
+    margin-bottom: 10px;
+    border: 1px solid #ddd; /* Add a 1px solid border with a light gray color */
+    padding: 10px; /* Add some padding to create space inside the border */
+}
