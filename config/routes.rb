@@ -9,7 +9,7 @@
 
  # frozen_string_literal: true
 Rails.application.routes.draw do
-  
+
   root 'categories#index'
 
   resources :categories do 
@@ -17,4 +17,5 @@ Rails.application.routes.draw do
       resources :comments
     end
   end
+  resources :donations, only: [:new, :create]
 end

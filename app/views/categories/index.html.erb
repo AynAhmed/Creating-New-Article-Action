@@ -1,15 +1,7 @@
 <h1>Categories</h1>
 <ul class = "categoryContainer">
   <% @categories.each do |category| %>
-    <li>
-      
-      <li><%= link_to category.name,category_path(category) %> <%= category.articles.count %></li>
-        <ul>
-          <li class = "categoryEdit"><%= link_to "Edit", edit_category_path(category) %></li>
-          <li class = "categoryDelete"><%= link_to "Delete", category_path(category), method: :delete, data: {
-            turbo_method: :delete,
-            turbo_confirm: "Are you sure?"
-          } %></li>
+    
         </ul>
         <p class = "categoryDesc"><i><%= category.description %></i></p>
       </div>

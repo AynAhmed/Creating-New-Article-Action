@@ -54,8 +54,7 @@ class CategoriesController < ApplicationController
     params.require(:category).permit(:name, :description)
   end
 
-  private
-
+#use the method to get rid of reapeated code.
   def set_category
     @category = Category.find(params[:id])
   end

@@ -1,0 +1,11 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/AynAhmed/Creating-New-Article-Action.git",
+  "license": "MIT",
+  "description": "blog app",
+  "dependencies": {
+    "jquery": "^3.7.1"
+  }
+}
