@@ -1,15 +1,20 @@
-import $ from 'jquery';
-//this import allow you to use the $ symbol
+require('dotenv').config()
 
-$(document).ready(() => {
+
+//this import allow you to use the $ symbol
+$(function(){
+    // console.log("is this working?")
+
+    const public_key = process.env.STRIPE_PUBLIC_KEY;
+   
     // This function runs when the DOM is fully loaded
-  
+
     // Initializing Stripe with your public API key
-    const stripe = Stripe("<%= ENV['STRIPE_PUBLIC_KEY'] %>");
-    
+    const stripe = Stripe(public_key);
+
     // Creating an instance of the Stripe Elements library
     const elements = stripe.elements();
-  
+
     // Creating a card element and mounting it to the specified HTML element
     const cardElement = elements.create('card');
     cardElement.mount('#card-element');

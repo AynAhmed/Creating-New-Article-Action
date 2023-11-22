@@ -3,14 +3,14 @@
   <h1 class="category-name"><%= @category.name %></h1>
 
   <p class="category-description"><%= @category.description %></p>
-
+  <hr style="border-top: 2px solid #000; margin-bottom: 20px 0;">
   <h2 class="articles-heading">Articles</h2>
   <ul class="article-list">
     <% @category.articles.each do |article| %>
       <li class="article-item"><%= link_to article.title, category_article_path(@category, article) %></li>
     <% end %>
   </ul>
-
+  <%= link_to 'Create Article', new_category_article_path(@category)%>
   <%= link_to 'Back', categories_path, class: "back-link" %>
 
 

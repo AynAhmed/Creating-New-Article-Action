@@ -13,10 +13,13 @@
 
 <div class = "comment-section">
   <h2>Comments</h2>
-  
-  <p id= "display" </p>
 
-  <button id= "load-comments" >Load Comments</button> 
+  <div id="comments"></div>
+
+  <div id="category-id" data-category="<%= @category.id %>"></div>
+
+
+  <button id="load-comments" data-article="<%= @article.id %>">Load Comments</button>
 
 
   <h2>Add a comment:</h2>

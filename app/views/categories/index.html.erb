@@ -1,8 +1,11 @@
+<% if user_signed_in? %> 
 <h1>Categories</h1>
+<div> 👋 Welcome<% current_user.first_name %>
+<%= button_to "Sign out", destroy_user_session_path, method: :delete %>
 <ul class = "categoryContainer">
   <% @categories.each do |category| %>
-    
         </ul>
+        <h3><%= link_to category.name,category_path(category) %> <%= category.articles.count %></h3>
         <p class = "categoryDesc"><i><%= category.description %></i></p>
       </div>
     </li>
@@ -11,3 +14,15 @@
 <p class = "newCategory">
 <%= link_to "New Category", new_category_path(@category) %>
 </p>
+<% else %>
+<% @categories.each do |category| %>
+        </ul>
+        <h3><%= link_to category.name,category_path(category) %> <%= category.articles.count %></h3>
+        <p class = "categoryDesc"><i><%= category.description %></i></p>
+      </div>
+    </li>
+  <% end %>
+<% end %>
+
+
+

@@ -7,7 +7,7 @@ class DonationsController < ApplicationController
     @donation = Donation.new(donation_params)
 
     charge = Stripe::Charge.create({
-      amount: @donation.amount * 100, #conver to cents 
+      amount: @donation.amount * 100, #convert to cents 
       currency: 'usd',
       source: params[:stripe_token],
       description: 'Donations',
@@ -25,7 +25,7 @@ class DonationsController < ApplicationController
   private
 
   def donation_params 
-    params.require(:donation).permit(:first_name, :last_name, :email, :ammount)
+    params.require(:donation).permit(:first_name, :last_name, :email, :amount)
   end
   
 

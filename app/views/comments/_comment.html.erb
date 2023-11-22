@@ -10,6 +10,14 @@
   </p>
 
   <p>
+  <button class="like-button" data-comment-id="<%= comment.id %>">Like</button>
+  <span class="like-count" data-comment-id="<%= comment.id %>"><%= comment.likes_count || '0' %></span> Likes
+
+
+</p>
+
+
+  <p>
   <%= link_to "Delete Comment", category_article_comment_path(@category, @article, comment), data: {
         turbo_method: :delete,
         turbo_confirm: "Are you sure?"
