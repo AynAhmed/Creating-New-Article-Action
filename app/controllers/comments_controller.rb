@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class CommentsController < ApplicationController
- 
+  before_action :authenticate_user!, except: [:index,]
 
     def index
       @comments = Comment.where(article_id: params[:article_id])

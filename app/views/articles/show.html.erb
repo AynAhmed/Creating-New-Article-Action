@@ -1,3 +1,4 @@
+<%= button_to user_signed_in? ? "Sign Out" : "Sign In", user_signed_in? ? destroy_user_session_path : new_user_session_path, method: :delete %>
 <h1><%= @article.title %></h1>
 
 <p><%= @article.body %></p>

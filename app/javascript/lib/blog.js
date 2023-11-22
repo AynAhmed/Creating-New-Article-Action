@@ -44,10 +44,11 @@ $(document).ready(function () {
                 
             })
 
-            .fail(function (jqXHR, textStatus, errorThrown) {
+            
+            });
+            fail(function (jqXHR, textStatus, errorThrown) {
                 console.error('Ajax error:', errorThrown);
                 alert('Failed to load comments.');
-            });
     });
 
     
