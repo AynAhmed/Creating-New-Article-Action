@@ -1,6 +1,7 @@
 <% if user_signed_in? %> 
 <div> 👋 Welcome <%= current_user.first_name %>
 <%= button_to "Sign out", destroy_user_session_path, method: :delete %>
+
 <h1>Categories</h1>
 <ul class = "categoryContainer">
   <% @categories.each do |category| %>

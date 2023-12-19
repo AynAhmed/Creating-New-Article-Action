@@ -9,14 +9,21 @@ class CommentsController < ApplicationController
     end
 
 
-  def create
-    @category = Category.find(params[:category_id])
-    @article = Article.find(params[:article_id])
-
-    @comment = @article.comments.create(comment_params)
-
-    redirect_to category_article_path(@category, @article)
-  end
+    def create
+      @category = Category.find(params[:category_id])
+      @article = Article.find(params[:article_id])
+    
+      # Assuming you're using Devise for authentication, you can access the current user like this:
+      @comment = @article.comments.build(comment_params)
+      @comment.user = current_user
+    
+      if @comment.save
+        redirect_to category_article_path(@category, @article)
+      else
+        # Handle validation errors or other issues
+        render 'new'
+      end
+    end
 
   def destroy
     @category = Category.find(params[:category_id])

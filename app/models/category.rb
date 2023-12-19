@@ -5,6 +5,8 @@ class Category < ApplicationRecord
 
     # Added a new description attribute
     validates :description, presence: { allow_blank: true }
-  
+    def article_count
+      articles.count
+    end
   end
 

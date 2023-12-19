@@ -1,5 +1,15 @@
 <h1>Articles</h1>
 Our blog has <%= Article.public_count %> articles and counting!
+
+<h1>Most recent Articles</h1>
+<ul>
+  <% @recent_articles.each do |article| %>
+    <li>
+      <%= link_to article.title, category_articles_path(article.category, article) %>
+    </li>
+  <% end %>
+</ul>
+
 <ul>
   <% @articles.each do |article| %>
     <% unless article.archived? %>
@@ -10,3 +20,5 @@ Our blog has <%= Article.public_count %> articles and counting!
   <% end %>
 </ul>
 <%= link_to "New Article", new_category_article_path(@category) %>
+
+

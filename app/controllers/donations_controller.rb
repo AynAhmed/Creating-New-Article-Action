@@ -12,7 +12,7 @@ class DonationsController < ApplicationController
       source: params[:stripe_token],
       description: 'Donations',
     })
-    
+
     @donation.save
 
     flash[:success] = 'Thank you for your donation!'

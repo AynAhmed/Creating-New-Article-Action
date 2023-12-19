@@ -1,16 +1,37 @@
+
 <%= button_to user_signed_in? ? "Sign Out" : "Sign In", user_signed_in? ? destroy_user_session_path : new_user_session_path, method: :delete %>
 <h1><%= @article.title %></h1>
 
-<p><%= @article.body %></p>
-<p><strong>Category:</strong> <%= @article.category.name %></p>
+
+<div class= "articleContent"  style="border: gray solid 2px ">
+
+  <p><%= @article.body %></p>
+  <p><strong>Category:</strong> <%= @article.category.name %></p>
+
+  <ul>
+    <li><%= link_to "Edit", edit_category_article_path(@category, @article) %></li>
+    <li><%= link_to "Delete", category_article_path(@category), data: {
+      turbo_method: :delete,
+      turbo_confirm: "Are you sure?"
+    } %></li>
+  </ul>
+</div>
 
 <ul>
-  <li><%= link_to "Edit", edit_category_article_path(@category, @article) %></li>
-  <li><%= link_to "Delete", category_article_path(@category), data: {
-    turbo_method: :delete,
-    turbo_confirm: "Are you sure?"
-  } %></li>
+  <% @user_comments.each do |comment| %>
+    <li>
+      <%= comment.body %>
+      <p>Commented on: <%= comment.article.title %></p>
+    </li>
+  <% end %>
 </ul>
+
+
+<button class= "toggleContent" style="background-color: #4CAF50; border: none;color: white;
+padding: 10px 32px;
+border-radius: 5px;
+font-size: 16px;
+margin: 4px 2px;">Toggle Article Info</button>
 
 <div class = "comment-section">
   <h2>Comments</h2>

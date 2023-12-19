@@ -1,5 +1,8 @@
 <!-- app/views/categories/show.html.erb -->
 <%= button_to user_signed_in? ? "Sign Out" : "Sign In", user_signed_in? ? destroy_user_session_path : new_user_session_path, method: :delete %>
+<!-- app/views/users/show.html.erb -->
+
+
 
   <h1 class="category-name"><%= @category.name %></h1>
 

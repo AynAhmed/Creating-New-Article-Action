@@ -4,13 +4,21 @@ class CategoriesController < ApplicationController
   def index
     @categories = Category.all
   end
+  
   def show
     # Display category details and associated articles
     @articles = @category.articles
+    @category = Category.find(params[:id])
+    @article_count = @category.articles.count
+    
+    @user = User.find(params[:id])
+    @user_comments = @user.user_comments
   end
+
   def new
     @category = Category.new
   end
+
   def create
     @category = Category.new(categories_params)
     if @category.save
