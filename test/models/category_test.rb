@@ -10,7 +10,7 @@ class CategoryTest < ActiveSupport::TestCase
     3.times do |i|
       category.articles.create(
         title: "Sample Article #{i}",
-        content: "Content #{i}"
+        body: "Content #{i}"
       )
     end
 

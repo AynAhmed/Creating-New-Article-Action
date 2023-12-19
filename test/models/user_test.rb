@@ -6,11 +6,11 @@ class UserTest < ActiveSupport::TestCase
   # end
   test "should return comments made by the user" do
     user = User.create(username: "testuser")
-    article = Article.create(title: "Sample Article", content: "Content")
-    
-    user.comments.create(content: "Comment 1", article: article)
-    user.comments.create(content: "Comment 2", article: article)
-    article.comments.create(content: "Comment 3", user: user)
+    article = Article.create(title: "Sample Article", body: "Content")
+
+    user.comments.create(commenter: "User Commenter", body: "Comment 1", article: article)
+    user.comments.create(commenter: "User Commenter", body: "Comment 2", article: article)
+    article.comments.create(commenter: "Article Commenter", body: "Comment 3", user: user)
 
     user_comments = user.user_comments
 

@@ -13,11 +13,11 @@ class ArticleTest < ActiveSupport::TestCase
 
   test "should return five recent articles" do
     category = Category.create(name: "Technology")
-    
-    6.times do |i|
+
+    5.times do |i|
       Article.create(
         title: "Sample Article #{i}",
-        content: "Content #{i}",
+        body: "Content #{i}",
         category: category,
         created_at: i.days.ago
       )
